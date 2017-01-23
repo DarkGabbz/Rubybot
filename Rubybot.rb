@@ -1,6 +1,6 @@
 require 'discordrb'
 
-bot = Discordrb::Commands::CommandBot.new token: 'MjczMTQ3NTI5ODYzMTAyNDY1.C2fUCw.x3lGYofx9P7d4LNjAx-rwpI15hM', client_id: 273147529863102465, prefix: 'c-'
+bot = Discordrb::Commands::CommandBot.new token: 'MjczMTQ3NTI5ODYzMTAyNDY1.C2gYfA.EvY1HwSdeNv2vqudXk4l5vBaW4Y', client_id: 273147529863102465, prefix: 'c-'
 
 #commands
 
@@ -15,7 +15,7 @@ bot.command(:exit, help_available: false) do |event|
   # able to shut your bot down whenever they wanted.
   break unless event.user.id == 272738271862325249 # Replace number with your ID
 
-  bot.send_message(event.channel.id, 'Tschau , Calafska :)!')
+  bot.send_message(event.channel.id, 'Ciao , Calafska :)!')
   exit
 end
 
@@ -27,10 +27,6 @@ end
 #Only one image :c
 bot.command(:somerealnudes) do |event| 
   event.respond ('http://img.rule34.xxx//samples/2088/sample_d69ff8de0cd0cd3e3ee59074f4f24712cba51cb3.jpg?2262669')
-end
-
-bot.command(:sourcecode) do |event| 
-  event.respond ('https://github.com/Calafska/Calafskas-ruby-discord-bot')
 end
 
 bot.command(:github) do |event| 
@@ -145,7 +141,7 @@ bot.command(:say) do |event|
   event.user.respond.message
 end
 
-bot.command(:Source) do |event|
+bot.command(:source) do |event|
   event.respond 'https://github.com/Calafska/Calafskas-ruby-discord-bot'
 end
 

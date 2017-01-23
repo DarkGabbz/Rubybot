@@ -145,6 +145,34 @@ bot.command(:say) do |event|
   event.user.respond.message
 end
 
+bot.command(:sammy) do |event|
+  event.respond 'https://www.youtube.com/channel/UC8B0hXnzvJgNyHDQPIHtQJQ'
+end
+
+bot.command(:date) do |event|
+  event.user.pm ('Hi there ( ͡° ͜ʖ ͡°)')
+end
+
+bot.command(:sans) do |event|
+  event.respond 'https://www.youtube.com/watch?v=ZcoqR9Bwx1Y' 
+end
+
+bot.command(:temp) do |event|
+  event.respond 'https://gbatemp.net/'
+end
+
+bot.command(:gbatemp) do |event|
+  event.respond 'https://gbatemp.net/'
+end
+
+bot.command(:forum) do |event|
+  event.respond 'https://gbatemp.net/'
+end
+
+bot.command(:snowdin) do |event| 
+  event.respond 'https://www.youtube.com/watch?v=xY37aWVokNQ'
+end
+
 bot.command(:source) do |event|
   event.respond 'https://github.com/Calafska/Calafskas-ruby-discord-bot'
 end

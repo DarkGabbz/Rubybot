@@ -29,6 +29,14 @@ bot.command(:somerealnudes) do |event|
   event.respond ('http://img.rule34.xxx//samples/2088/sample_d69ff8de0cd0cd3e3ee59074f4f24712cba51cb3.jpg?2262669')
 end
 
+bot.command(:sourcecode) do |event| 
+  event.respond ('https://github.com/Calafska/Calafskas-ruby-discord-bot')
+end
+
+bot.command(:github) do |event| 
+  event.respond ('https://github.com/Calafska')
+end
+
 bot.command(:ky) do |event| 
   event.respond ('https://www.youtube.com/watch?v=2dbR2JZmlWo')
 end

@@ -20,11 +20,15 @@ bot.command(:exit, help_available: false) do |event|
 end
 
 
-bot.command(:suicideTutorial) do |event|
+bot.command(:suicidetutorial) do |event|
   event.respond ('https://www.youtube.com/watch?v=Qg4SVGFbPZk')
 end
 
-#Only one image :c
+bot.command(:virtualboy) do |event|
+  event.respond ('https://www.youtube.com/watch?v=SdZo6Gx9DNQ')
+end
+
+#Only one image , we should change that c:!
 bot.command(:somerealnudes) do |event| 
   event.respond ('http://img.rule34.xxx//samples/2088/sample_d69ff8de0cd0cd3e3ee59074f4f24712cba51cb3.jpg?2262669')
 end
@@ -50,7 +54,7 @@ bot.command(:nudes) do |event|
 end
 
 bot.command(:kingy) do |event|
-  event.respond ('Kingy is the best <3')
+  event.respond ('Kingy the King <3')
 end
 
 bot.command(:whoami) do |event|
@@ -86,7 +90,7 @@ bot.command(:memes) do |event|
 end
 
 bot.command(:credits) do |event|
-  event.respond ('Kingy : Best coder I know :) , Calafska : My father <3')
+  event.respond ('Kingy : For the original code :) , Calafska : For moding the bot code , xtheman166 : For helping me out')
 end
 
 bot.command(:trying) do |event|
@@ -106,7 +110,7 @@ bot.command(:hack) do |event|
 end
 
 bot.command(:calafska) do |event|
-  event.respond ('My father <3') 
+  event.respond ('The coder that made me c:') 
 end
 
 bot.command(:xthecube166) do |event|

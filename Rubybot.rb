@@ -145,6 +145,10 @@ bot.command(:source) do |event|
   event.respond 'https://github.com/Calafska/Calafskas-ruby-discord-bot'
 end
 
+bot.command(:GhostLatte) do |event|
+  event.respond 'I want to get into the van bby ( ͡° ͜ʖ ͡°)'
+end
+
 
 # Music
 

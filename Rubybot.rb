@@ -191,7 +191,7 @@ bot.command(:connect) do |event|
 
   # Here we return from the command unless the channel is not nil (i. e. the user is in a voice channel). The `next`
   # construct can be used to exit a command prematurely, and even send a message while were at it.
-  next "What's that? Join nothing??? Join a Voice Channel first, man!" unless channel
+  next "Im too mainstream to join nothing , please join a voicechat" unless channel
 
   # The `voice_connect` method does everything necessary for the bot to connect to a voice channel. Afterwards the bot
   # will be connected and ready to play stuff back.

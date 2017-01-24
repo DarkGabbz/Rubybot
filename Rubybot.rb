@@ -1,21 +1,18 @@
 require 'discordrb'
 
-bot = Discordrb::Commands::CommandBot.new token: 'MjczMTQ3NTI5ODYzMTAyNDY1.C2gYfA.EvY1HwSdeNv2vqudXk4l5vBaW4Y', client_id: 273147529863102465, prefix: 'c-'
+bot = Discordrb::Commands::CommandBot.new token: 'Replace With Your Token', client_id: 273147529863102465, prefix: 'c-'
 
 #commands
 
 bot.command :ping do |event|
   event << 'pong!'
 
-  # Here we don't have to worry about the return value because the `event << line` statement automatically returns nil.
 end
 
 bot.command(:exit, help_available: false) do |event|
-  # This is a check that only allows a user with a specific ID to execute this command. Otherwise, everyone would be
-  # able to shut your bot down whenever they wanted.
   break unless event.user.id == 272738271862325249 # Replace number with your ID
 
-  bot.send_message(event.channel.id, 'Ciao , Calafska :)!')
+  bot.send_message(event.channel.id, 'Calafska-Bot out!')
   exit
 end
 
@@ -29,7 +26,7 @@ bot.command(:virtualboy) do |event|
 end
 
 #Only one image , we should change that c:!
-bot.command(:somerealnudes) do |event| 
+bot.command(:nudes) do |event| 
   event.respond ('http://img.rule34.xxx//samples/2088/sample_d69ff8de0cd0cd3e3ee59074f4f24712cba51cb3.jpg?2262669')
 end
 
@@ -49,16 +46,12 @@ bot.command(:pm) do |event|
   event.user.pm ('Hey this is Calafskas bot :) , pretty amazing that I work right ?')
 end
 
-bot.command(:nudes) do |event|
-  event.user.pm 'https://www.google.de/search?q=nudes&client=firefox-b-ab&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiAxNLt-djRAhVKSRoKHX6cCcsQ_AUICCgB&biw=946&bih=946#tbm=isch&q=nudes+naked'
-end
-
 bot.command(:kingy) do |event|
-  event.respond ('Kingy the King <3')
+  event.respond ('Kingy the King')
 end
 
 bot.command(:whoami) do |event|
-  event.respond ('Im Calafskas Discord bot programmed in Ruby :)! Made with love <3.')
+  event.respond ('Im Calafskas Discord bot programmed in Ruby :)! Visit my code on github , or fork my code.')
 end
 
 bot.command(:randomvideo) do |event|
@@ -70,9 +63,10 @@ bot.command(:imbored) do |event|
 end
 
 bot.command(:areyouintellegent) do |event|
-  event.respond ('Not yet.... Im just a discord bot c: ! But maybe Ill be in the Future')
+  event.respond ('Im a simple Discord bot :) ! But maybe I will be intellegent')
 end
 
+#should send random porn video
 bot.command(:porn) do |event|
   event.user.pm ('Welcome to the perverts c: pornhub.com')
 end
@@ -82,7 +76,7 @@ bot.command(:insult) do |event|
 end
 
 bot.command(:whydoiexist) do |event|
-  event.respond ('Im writing nice respondes :)! PM and chat ^u^.')
+  event.respond ('Because my dev coded me :).')
 end
 
 bot.command(:memes) do |event|
@@ -94,7 +88,7 @@ bot.command(:credits) do |event|
 end
 
 bot.command(:trying) do |event|
-  event.respond ('Trying to help <3.')
+  event.respond ('Trying to help.')
 end
 
 bot.command(:username) do |event|
@@ -105,16 +99,12 @@ bot.command(:cfw) do |event|
   event.respond ('Reinand or Luma ? Ill missgender AuroraWright quickly')
 end 
 
-bot.command(:hack) do |event|
-  event.respond ('HACKING DISCORD')
-end
-
 bot.command(:calafska) do |event|
-  event.respond ('The coder that made me c:') 
+  event.respond ('The dev that made me :)') 
 end
 
 bot.command(:xthecube166) do |event|
-  event.respond ('I like nudes too my boy!') 
+  event.respond ('Thanks for cleaning my code :)') 
 end
 
 bot.command(:benadnam) do |event|
@@ -153,19 +143,11 @@ bot.command(:date) do |event|
   event.user.pm ('Hi there ( ͡° ͜ʖ ͡°)')
 end
 
-bot.command(:sans) do |event|
-  event.respond 'https://www.youtube.com/watch?v=ZcoqR9Bwx1Y' 
-end
-
 bot.command(:temp) do |event|
   event.respond 'https://gbatemp.net/'
 end
 
 bot.command(:gbatemp) do |event|
-  event.respond 'https://gbatemp.net/'
-end
-
-bot.command(:forum) do |event|
   event.respond 'https://gbatemp.net/'
 end
 
@@ -185,21 +167,12 @@ end
 # Music
 
 bot.command(:connect) do |event|
-  # The `voice_channel` method returns the voice channel the user is currently in, or `nil` if the user is not in a
-  # voice channel.
   channel = event.user.voice_channel
-
-  # Here we return from the command unless the channel is not nil (i. e. the user is in a voice channel). The `next`
-  # construct can be used to exit a command prematurely, and even send a message while were at it.
   next "Im too mainstream to join nothing , please join a voicechat" unless channel
-
-  # The `voice_connect` method does everything necessary for the bot to connect to a voice channel. Afterwards the bot
-  # will be connected and ready to play stuff back.
   bot.voice_connect(channel)
   "Ok, I'm in #{channel.name}"
 end
 
-# A simple command that plays back an mp3 file.
 bot.command(:play_music) do |event|
   voice_bot = event.voice
   voice_bot.play_music.mp3('music.mp3')

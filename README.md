@@ -1,3 +1,2 @@
-# Calafskas perl discord bot
-A Discord bot programmed in ruby :).
-Its already compiled , you just need to run the ruby code ^u^
+# Calafskas Ruby bot
+Basic Discord bot with simple functions.

@@ -5,7 +5,7 @@ bot = Discordrb::Commands::CommandBot.new token: 'MjczMTQ3NTI5ODYzMTAyNDY1.C2gYf
 #commands
 
 bot.command :ping do |event|
-  event << 'I am alive , Calafska !'
+  event << 'pong!'
 
   # Here we don't have to worry about the return value because the `event << line` statement automatically returns nil.
 end

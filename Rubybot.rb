@@ -94,7 +94,7 @@ bot.command(:credits) do |event|
 end
 
 bot.command(:trying) do |event|
-  event.respond ('Trying to insult but also being cute <3.')
+  event.respond ('Trying to help <3.')
 end
 
 bot.command(:username) do |event|

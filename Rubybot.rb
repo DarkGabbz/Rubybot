@@ -202,7 +202,7 @@ end
 # A simple command that plays back an mp3 file.
 bot.command(:play_music) do |event|
   voice_bot = event.voice
-  voice_bot.play_music.mp3('data/music.mp3')
+  voice_bot.play_music.mp3('music.mp3')
   bot.voice_disconnect(channel)
 end
 
